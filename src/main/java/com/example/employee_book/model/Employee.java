@@ -1,4 +1,4 @@
-package com.example.SpringMockito;
+package com.example.employee_book.model;
 
 import java.util.Objects;
 

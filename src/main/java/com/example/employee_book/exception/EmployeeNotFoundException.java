@@ -1,11 +1,11 @@
-package com.example.SpringMockito.exception;
+package com.example.employee_book.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.BAD_REQUEST)
-public class EmployeeAlreadyAddedException extends RuntimeException{
-    public EmployeeAlreadyAddedException(){
+public class EmployeeNotFoundException extends RuntimeException{
+    public EmployeeNotFoundException(){
 
     }
 }

@@ -1,9 +1,10 @@
-package com.example.SpringMockito;
+package com.example.employee_book;
 
-import com.example.SpringMockito.exception.EmployeeAlreadyAddedException;
-import com.example.SpringMockito.exception.EmployeeNotFoundException;
-import com.example.SpringMockito.service.EmployeeService;
-import com.example.SpringMockito.service.EmployeeServiceImpl;
+import com.example.employee_book.exception.EmployeeAlreadyAddedException;
+import com.example.employee_book.exception.EmployeeNotFoundException;
+import com.example.employee_book.model.Employee;
+import com.example.employee_book.service.EmployeeService;
+import com.example.employee_book.serviceImpl.EmployeeServiceImpl;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package com.example.SpringMockito;
+package com.example.employee_book;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

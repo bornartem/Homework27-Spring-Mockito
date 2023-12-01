@@ -1,13 +1,14 @@
-package com.example.SpringMockito.service;
+package com.example.employee_book.serviceImpl;
 
-import com.example.SpringMockito.Employee;
-import com.example.SpringMockito.exception.EmployeeAlreadyAddedException;
-import com.example.SpringMockito.exception.EmployeeNotFoundException;
-import org.springframework.stereotype.Repository;
+import com.example.employee_book.model.Employee;
+import com.example.employee_book.exception.EmployeeAlreadyAddedException;
+import com.example.employee_book.exception.EmployeeNotFoundException;
+import com.example.employee_book.service.EmployeeService;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-@Repository
+@Service
 public class EmployeeServiceImpl implements EmployeeService {
     private final Map<String, Employee> employees = new HashMap<>(Map.of(
             "0", new Employee("Arnold", "Shwarzenegger", 189001, 1),
@@ -48,11 +49,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Collection<Employee> getAll() {
+    public List<Employee> getAll() {
         return new ArrayList<>(employees.values());
     }
+
     @Override
-    public Map<String, Employee>getMap(){
+    public Map<String, Employee> getMap() {
         return employees;
     }
 }

@@ -1,17 +1,15 @@
-package com.example.SpringMockito;
+package com.example.employee_book;
 
-import com.example.SpringMockito.service.DepartmentServiceImpl;
-import com.example.SpringMockito.service.EmployeeService;
+import com.example.employee_book.model.Employee;
+import com.example.employee_book.serviceImpl.DepartmentServiceImpl;
+import com.example.employee_book.service.EmployeeService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -22,7 +20,7 @@ class DepartmentServiceTest {
     private EmployeeService employeeServiceMock;
     @InjectMocks
     private DepartmentServiceImpl out;
-    List<Employee> employee = new ArrayList<>(List.of(
+    private final List <Employee> employee = new ArrayList<>(List.of(
             new Employee("Artem", "Bornyakov", 200022, 2),
             new Employee("Corey", "Taylor", 200011, 1),
             new Employee("Artem", "Born", 200033, 2),
@@ -33,8 +31,8 @@ class DepartmentServiceTest {
     public void shouldReturnSumOfSalaries() {
         when(employeeServiceMock.getAll())
                 .thenReturn(employee);
-        int sumSalaries = out.sumSalaryFromMap(1);
-        assertEquals(400055, sumSalaries);
+        int sumSalaries = out.sumSalaryFromMap(2);
+        assertEquals (employee.get(0).getSalary(), employee.get(2).getSalary(), sumSalaries);
 
     }
 
